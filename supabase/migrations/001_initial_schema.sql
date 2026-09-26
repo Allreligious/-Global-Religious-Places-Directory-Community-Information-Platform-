@@ -120,16 +120,6 @@ create table if not exists reports (
   created_at timestamptz not null default now()
 );
 
--- Useful first seed: the platform's initial geographic focus.
-insert into religious_places (
-  name, tradition, category, city, region, country, description
-) values
-  ('Calgary Community Place', 'Islam', 'Mosque', 'Calgary', 'Alberta', 'Canada',
-   'Initial MVP placeholder record for development.'),
-  ('Calgary Faith Centre', 'Christianity', 'Church', 'Calgary', 'Alberta', 'Canada',
-   'Initial MVP placeholder record for development.'),
-  ('Calgary Hindu Centre', 'Hinduism', 'Temple', 'Calgary', 'Alberta', 'Canada',
-   'Initial MVP placeholder record for development.'),
-  ('Calgary Sikh Community Centre', 'Sikhism', 'Gurdwara', 'Calgary', 'Alberta', 'Canada',
-   'Initial MVP placeholder record for development.')
-on conflict do nothing;
+-- Development seed intentionally omitted.
+-- Production/import data should be loaded only after source checking and
+-- organization verification. Keep source and source_url for traceability.
