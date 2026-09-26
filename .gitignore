@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+dist/
+build/
+.vercel/
+.env
+.env.local
+*.log
+coverage/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.db
+*.sqlite
